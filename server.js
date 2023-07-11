@@ -119,7 +119,7 @@ app.get('/events-registration',(req,res,next)=> {
 })
 // End of routes
 
-const port = 5501; // Set the desired port number
+const port = 5500; // Set the desired port number
 
 app.listen(port, '127.0.0.1', () => {
   console.log(`Application started and listening on http://127.0.0.1:${port}/`);

@@ -1,0 +1,15 @@
+.banner-sec{
+
+    background-image: url(./Images/Ministry.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+.custom-img{
+    background-image: url(./Images/Ministry.jpg);
+    height: auto;
+}
+section{
+    padding: 10px;
+}

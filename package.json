@@ -1,0 +1,45 @@
+{
+  "name": "pceakamangu",
+  "version": "1.0.1",
+  "description": "This is a final project for Eliud Mugu, a student at the presbyterian church of East Africa dedicated to PCEA Kamangu Town Church",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i style.css -o output.css --watch",
+    "db": "db-connect.js"
+  },
+  "author": "ellithetech",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "datatables.net-dt": "^1.13.5",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "es": "^0.8.0",
+    "express": "^4.18.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "git": "^0.1.5",
+    "http-status-codes": "^2.2.0",
+    "init": "^0.1.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.1",
+    "node": "^20.2.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "postcss-cli": "^10.1.0",
+    "reveal.js": "^4.5.0",
+    "shortid": "^2.2.16",
+    "tw-elements": "^1.0.0-beta2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "nodemon": "^3.0.1",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
+  }
+}

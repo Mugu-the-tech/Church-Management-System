@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
+<link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css">
+    <title>PCEA Kamangu Town Youths</title>
+
+    <script>
+        // Burger menus
+        document.addEventListener('DOMContentLoaded', function() {
+            // open
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+        
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+        
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function() {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+        </script>
+    <style>
+        @media only screen and (min-width: 320px){
+            .parent:hover .child {
+                opacity:1;
+                height:auto;
+                overflow:none;
+                transform: translateY(0);
+                background: white;
+            }
+            .child {
+                opacity:0;
+                height:0;
+                overflow:hidden;
+                transform: translateY(-10%);
+            }
+        }
+        
+
+
+        .custom-shape-divider-top-1685443279 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1685443279 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 24px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1685443279 .shape-fill {
+    fill: #ffffff;
+}
+    </style>
+</head>
+<body class="m-8 ">
+   <header class="bg-blue-950 ">
+    <!-------------------NAV BAR-->
+    <nav class="relative  px-4 py-4 flex justify-between items-center bg-inherit">
+		<a class="text-3xl font-bold leading-none" href="#">
+			<img src="../cropped-logo-300-100.png" alt="" class="w-20">
+		</a>
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-blue-600 p-3">
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+		<ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2  lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+			<li><a class="font-bold text-sm text-blue-600 hover:text-gray-500" href="#">Home</a></li>
+			<li class="text-white">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-sm text-white " href="#">About Us</a></li>
+			<li class="text-white">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li class="parent relative">
+                <a class="text-sm text-white hover:text-gray-500" href="#">Ministries</a>
+            
+                <ul class="child transition duration-300 w-[auto] md:shadow-lg md:rounded-b  md:absolute top-full md:w-56  grid col-span-1 grid-cols-2">
+                    <li class=""> <a href="church-school.html" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Children</a></li>
+                    <li class=""> <a href="pcmf-guild.html" target="_blank" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Men</a></li>
+                    <li class=""> <a href="brigade.html" target="_blank" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Brigade</a></li>
+                    <li class=""> <a href="health-board.html" target="_blank" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"> Health Board</a></li>
+                    <li class=""> <a href="youths.html" target="_blank" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"> Youths</a></li>
+                    <li class=""> <a href="pcmf-guild.html"  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Womans Guild</a></li>
+                    <li class=""><a href="" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"> </a></li>
+                    <li class=""><a href="" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"></a></li>
+                </ul>
+            </li>
+			<li class="text-white">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-sm text-white hover:text-gray-500" href="#">Events</a></li>
+			<li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+			<li><a class="text-sm text-white hover:text-gray-500" href="#">Contact</a></li>
+            <li class="text-gray-300">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>
+			</li>
+            <li><a class="text-sm text-white hover:text-gray-500" href="events-registration.html">Register an Event </a></li>
+		</ul>
+		
+	</nav>
+    <div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+			<div class="flex items-center mb-8">
+				<a class="mr-auto text-3xl font-bold leading-none" href="#">
+				<img src="cropped-logo-300-100.png" alt="">
+				</a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">About Us</a>
+					</li>
+					<li class="mb-1 parent relative">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Ministries</a>
+
+                        <ul class="child transition duration-300 md:shadow-lg md:rounded-b  md:absolute top-full md:w-48  ">
+                            <li class=""> <a href="church-school.html" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Children</a></li>
+                    <li class=""> <a href="pcmf-guild.html" target="_blank" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Men</a></li>
+                    <li class=""> <a href="brigade.html" target="_blank" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Brigade</a></li>
+                    <li class=""> <a href="health-board.html" target="_blank" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"> Health Board</a></li>
+                    <li class=""> <a href="youths.html" target="_blank" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"> Youths</a></li>
+                    <li class=""> <a href="pcmf-guild.html"  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded">Womans Guild</a></li>
+                    <li class=""><a href="" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"> </a></li>
+                    <li class=""><a href="" class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"></a></li>
+                        </ul>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Events</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Contact</a>
+					</li>
+                    <li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="events-registration.html">Register an Event</a>
+					</li>
+				</ul>
+			</div>
+			
+		</nav>
+	</div>
+   </header> 
+<!-------------------------------Banner Section-->
+<section class="bg-fixed bg-cover h-[100vh] bg-center  banner-sec   ">
+
+    <div class="border border-t-red-600 border-b-blue-800  sm:w-[max-w-full] p-2 flex flex-col flex-wrap justify-center items-center mt-[230px] ml-auto mr-auto hover:border-t-blue-800  hover:border-b-red-700 rounded-lg filter backdrop-blur-sm">
+        <div class="m-0 max-w-full text-center">
+        <span class="text-cyan-400 animate-bounce text-[4em] text-center" style="font-family: 'Berkshire Swash', cursive;">welcome</span>
+        <h1 class="text-white  text-[3em]" style="font-family: 'Dancing Script', cursive;">PCEA Kamangu Town Church</h1>
+      </div>
+      <div class="">
+        <a href="#"> <button class=" h-12 border-y-transparent border-2  hover:border-t-blue-500 hover:duration-[2s]  m-4 rounded-md hover:border-b-red-600 hover:inset-0 bg-cyan-400"><span class="p-2 text-white">Join Our Services</span> </button></a>
+      </div>
+      </div>
+
+</section>
+<!------------------------Message-->
+
+<section class="bg-[#222f3e] pt-[70px] flex flex-col justify-center content-center items-center">
+<h3  class=" text-[3em] text-cyan-500 text-center"   style="font-family: 'Berkshire Swash', cursive;">Our Guiding Cores</h3>
+    <div class="container flex flex-wrap ">
+        <div class="container flex flex-col m-4 w-[320px] border-1 rounded-md bg-[#9B0D1C] left">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="w-[320px] ">
+            </div>
+            <div class="text-center text-white text-[1.2em] m-2 ">
+                <h4></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ullam sed et pariatur quas voluptate ducimus autem quaerat
+                    deserunt aliquid, vitae assumenda eos quia, suscipit aspernatur quisquam nulla asperiores non?</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container flex flex-col m-4 w-[320px] border-1 bg-[#08204F] rounded-md left">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="w-[320px] ">
+            </div>
+            <div class="text-center text-white text-[1.2em] m-2 ">
+                <h4></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ullam sed et pariatur quas voluptate ducimus autem quaerat
+                    deserunt aliquid, vitae assumenda eos quia, suscipit aspernatur quisquam nulla asperiores non?</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container flex flex-col m-4 w-[320px] border-1 bg-[#F5C845] rounded-md right">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="w-[320px] ">
+            </div>
+            <div class="text-center text-white text-[1.2em] m-2 ">
+                <h4></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ullam sed et pariatur quas voluptate ducimus autem quaerat
+                    deserunt aliquid, vitae assumenda eos quia, suscipit aspernatur quisquam nulla asperiores non?</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container flex flex-col m-4 w-[320px] border-1 bg-white rounded-md right">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="w-[320px] ">
+            </div>
+            <div class="text-center text-gray-700 text-[1.2em] m-2 ">
+                <h4></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ullam sed et pariatur quas voluptate ducimus autem quaerat
+                    deserunt aliquid, vitae assumenda eos quia, suscipit aspernatur quisquam nulla asperiores non?</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+    </div>
+</section>
+<!----------------------------Ministries-->
+
+<section class=" bg-[#1e272e] border-t-2 shadow-inner shadow-white custom-img bg-fixed bg-cover bg-center">
+    <h4 class=" text-[3em] text-cyan-500 text-center"   style="font-family: 'Berkshire Swash', cursive;">Our Ministries</h4>
+    <div class="flex flex-wrap justify-center items-center">
+        <div class="container justify-center flex flex-row flex-wrap ring-2 ring-cyan-300 w-[200px] border-1 bg-white rounded-md p-4 m-2 ">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="rounded-full h-[100px] w-[100px]">
+            </div>
+            <div class="text-center text-gray-700 m-1">
+                <p class="text-center "> Children Ministry</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container justify-center flex flex-row flex-wrap ring-2 ring-cyan-300 w-[200px] border-1 bg-white rounded-md p-4 m-2 ">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="rounded-full h-[100px] w-[100px]">
+            </div>
+            <div class="text-center text-gray-700 m-1">
+                <p class="text-center "> Children Ministry</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container justify-center flex flex-row flex-wrap ring-2 ring-cyan-300 w-[200px] border-1 bg-white rounded-md p-4 m-2 ">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="rounded-full h-[100px] w-[100px]">
+            </div>
+            <div class="text-center text-gray-700 m-1">
+                <p class="text-center "> Children Ministry</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container justify-center flex flex-row flex-wrap ring-2 ring-cyan-300 w-[200px] border-1 bg-white rounded-md p-4 m-2 ">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="rounded-full h-[100px] w-[100px]">
+            </div>
+            <div class="text-center text-gray-700 m-1">
+                <p class="text-center "> Children Ministry</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container justify-center flex flex-row flex-wrap ring-2 ring-cyan-300 w-[200px] border-1 bg-white rounded-md p-4 m-2 ">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="rounded-full h-[100px] w-[100px]">
+            </div>
+            <div class="text-center text-gray-700 m-1">
+                <p class="text-center "> Children Ministry</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container justify-center flex flex-row flex-wrap ring-2 ring-cyan-300 w-[200px] border-1 bg-white rounded-md p-4 m-2 ">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="rounded-full h-[100px] w-[100px]">
+            </div>
+            <div class="text-center text-gray-700 m-1">
+                <p class="text-center "> Children Ministry</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container justify-center flex flex-row flex-wrap ring-2 ring-cyan-300 w-[200px] border-1 bg-white rounded-md p-4 m-2 ">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="rounded-full h-[100px] w-[100px]">
+            </div>
+            <div class="text-center text-gray-700 m-1">
+                <p class="text-center "> Children Ministry</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container justify-center flex flex-row flex-wrap ring-2 ring-cyan-300 w-[200px] border-1 bg-white rounded-md p-4 m-2 ">
+            <div class="">
+                <img src="./Images/1429084.jpg" alt="" class="rounded-full h-[100px] w-[100px]">
+            </div>
+            <div class="text-center text-gray-700 m-1">
+                <p class="text-center "> Children Ministry</p>
+                    <a href="" class="text-cyan-500">Read More <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="inline w-5 "><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> 
+                        <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#0cb8bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></a>
+            </div>
+            <div class="div"></div>
+        </div>
+    </div>
+</section>
+<!-----------------------------Mission-->
+<hr class="h-1 bg-[#00ffff]">
+<section class="bg-[#f3f4f5] flex flex-wrap justify-center items-center mt-8 p-10">
+   <h1 class="text-center text-[3em] text-cyan-400" style="font-family: 'Berkshire Swash', cursive;">Vision and Mission</h1>
+    <div class="container flex flex-wrap items-center justify-center">
+        <div class="container flex flex-col  w-[320px] border-1 bg-[#9B0D1C] bottom">
+            <div class="text-center text-white text-[1.2em] m-2 " style="font-family: 'Geologica', sans-serif;">
+                <h4 class="text-[1.5em] text-center p-2 " style="font-family: 'Geologica', sans-serif;">MISSION</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ullam sed et pariatur quas voluptate ducimus autem quaerat
+                    deserunt aliquid, vitae assumenda eos quia, suscipit aspernatur quisquam nulla asperiores non?</p>
+            </div>
+            <div class="div"></div>
+        </div>
+        <div class="container flex flex-col  w-[320px] border-1 bottom bg-[#08204F]"style="font-family: 'Geologica', sans-serif;" >
+            <div class="text-center text-white text-[1.2em] m-2">
+                <h4 class="text-[1.5em] text-center p-2 " style="font-family: 'Geologica', sans-serif;">Our Vision</h4>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ullam sed et pariatur quas voluptate ducimus autem quaerat
+                    deserunt aliquid, vitae assumenda eos quia, suscipit aspernatur quisquam nulla asperiores non?</p>
+            </div>
+            <div class="div"></div>
+        </div>
+        </div>
+</section>
+
+<!----------------------------pastors/leaders-->
+
+<section class=" bg-cover bg-fixed bg-center custom-img ">
+    <div class=" h-full w-full bg-gray-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 -my-2">
+            <h1 class="text-center text-[3em] text-cyan-400" style="font-family: 'Berkshire Swash', cursive;">Message From our Reverend  </h1>
+            <div class="container lg:flex  lg:justify-center lg:items-center">
+                <div class=" w-full lg:w-[728px] lg:flex m-2">
+                    <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('./Images/1429084.jpg')" title="Mountain">
+                    </div>
+                    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                    <div class="mb-8">
+                        <p class="text-sm text-gray-600 flex items-center">
+                        Reverends Message
+                        </p>
+                        <div class="text-gray-900 font-bold text-xl mb-2">Reverends Message in the Year 2023</div>
+                        <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full mr-4" src="./Images/1429084.jpg" alt="Reve">
+                        <div class="text-sm">
+                        <p class="text-gray-900 leading-none">Rev John Kabue</p>
+                        <p class="text-gray-600">Jan 1</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class=" w-full lg:w-[728px] lg:flex m-2">
+                    <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('./Images/1429084.jpg')" title="Mountain">
+                    </div>
+                    <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                    <div class="mb-8">
+                        <p class="text-sm text-gray-600 flex items-center">
+                        Reverends Message
+                        </p>
+                        <div class="text-gray-900 font-bold text-xl mb-2">Reverends Message in the Year 2023</div>
+                        <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full mr-4" src="./Images/1429084.jpg" alt="Reve">
+                        <div class="text-sm">
+                        <p class="text-gray-900 leading-none">Rev John Kabue</p>
+                        <p class="text-gray-600">Jan 1</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!------------------------Footer-->
+
+<section id="contact" class="relative w-full min-h-auto bg-black text-gray-400 pt-[70px]" >
+    <h1 class="text-4xl p-4 font-bold tracking-wide text-center" style="font-family: 'Berkshire Swash', cursive;">
+        Contact
+    </h1>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cyan-300 h-32 w-full"></div>
+    
+    <!-- wrapper -->
+    <div class="relative p-5 lg:px-20 flex flex-col md:flex-row items-center justify-center">
+    
+        <!-- Social Media -->
+        <div class="w-full md:w-1/2 p-5 md:px-0 mx-5">
+        <div class="bg-gray-900 border border-cyan-500 w-full lg:w-1/2 h-full p-5 pt-8">
+            <h3 class="text-2xl font-semibold mb-5">
+            Our Social Media
+            </h3>
+            <!-- list -->
+            <div class="flex flex-col gap-3">
+            <a href="#" class="flex items-center hover:text-white hover:bg-cyan-500 p-2">
+              <svg fill="currentcolor"class="w-6 h-6 m-2" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier"> <title>instagram</title> <path d="M25.805 7.996c0 0 0 0.001 0 0.001 0 0.994-0.806 1.799-1.799 1.799s-1.799-0.806-1.799-1.799c0-0.994 0.806-1.799 1.799-1.799v0c0.993 0.001 1.798 0.805 1.799 1.798v0zM16 20.999c-2.761 0-4.999-2.238-4.999-4.999s2.238-4.999 4.999-4.999c2.761 0 4.999 2.238 4.999 4.999v0c0 0 0 0.001 0 0.001 0 2.76-2.237 4.997-4.997 4.997-0 0-0.001 0-0.001 0h0zM16 8.3c0 0 0 0-0 0-4.253 0-7.7 3.448-7.7 7.7s3.448 7.7 7.7 7.7c4.253 0 7.7-3.448 7.7-7.7v0c0-0 0-0 0-0.001 0-4.252-3.447-7.7-7.7-7.7-0 0-0 0-0.001 0h0zM16 3.704c4.003 0 4.48 0.020 6.061 0.089 1.003 0.012 1.957 0.202 2.84 0.538l-0.057-0.019c1.314 0.512 2.334 1.532 2.835 2.812l0.012 0.034c0.316 0.826 0.504 1.781 0.516 2.778l0 0.005c0.071 1.582 0.087 2.057 0.087 6.061s-0.019 4.48-0.092 6.061c-0.019 1.004-0.21 1.958-0.545 2.841l0.019-0.058c-0.258 0.676-0.64 1.252-1.123 1.726l-0.001 0.001c-0.473 0.484-1.049 0.866-1.692 1.109l-0.032 0.011c-0.829 0.316-1.787 0.504-2.788 0.516l-0.005 0c-1.592 0.071-2.061 0.087-6.072 0.087-4.013 0-4.481-0.019-6.072-0.092-1.008-0.019-1.966-0.21-2.853-0.545l0.059 0.019c-0.676-0.254-1.252-0.637-1.722-1.122l-0.001-0.001c-0.489-0.47-0.873-1.047-1.114-1.693l-0.010-0.031c-0.315-0.828-0.506-1.785-0.525-2.785l-0-0.008c-0.056-1.575-0.076-2.061-0.076-6.053 0-3.994 0.020-4.481 0.076-6.075 0.019-1.007 0.209-1.964 0.544-2.85l-0.019 0.059c0.247-0.679 0.632-1.257 1.123-1.724l0.002-0.002c0.468-0.492 1.045-0.875 1.692-1.112l0.031-0.010c0.823-0.318 1.774-0.509 2.768-0.526l0.007-0c1.593-0.056 2.062-0.075 6.072-0.075zM16 1.004c-4.074 0-4.582 0.019-6.182 0.090-1.315 0.028-2.562 0.282-3.716 0.723l0.076-0.025c-1.040 0.397-1.926 0.986-2.656 1.728l-0.001 0.001c-0.745 0.73-1.333 1.617-1.713 2.607l-0.017 0.050c-0.416 1.078-0.67 2.326-0.697 3.628l-0 0.012c-0.075 1.6-0.090 2.108-0.090 6.182s0.019 4.582 0.090 6.182c0.028 1.315 0.282 2.562 0.723 3.716l-0.025-0.076c0.796 2.021 2.365 3.59 4.334 4.368l0.052 0.018c1.078 0.415 2.326 0.669 3.628 0.697l0.012 0c1.6 0.075 2.108 0.090 6.182 0.090s4.582-0.019 6.182-0.090c1.315-0.029 2.562-0.282 3.716-0.723l-0.076 0.026c2.021-0.796 3.59-2.365 4.368-4.334l0.018-0.052c0.416-1.078 0.669-2.326 0.697-3.628l0-0.012c0.075-1.6 0.090-2.108 0.090-6.182s-0.019-4.582-0.090-6.182c-0.029-1.315-0.282-2.562-0.723-3.716l0.026 0.076c-0.398-1.040-0.986-1.926-1.729-2.656l-0.001-0.001c-0.73-0.745-1.617-1.333-2.607-1.713l-0.050-0.017c-1.078-0.416-2.326-0.67-3.628-0.697l-0.012-0c-1.6-0.075-2.108-0.090-6.182-0.090z"></path> </g></svg>
+                instagram
+            </a>
+            <a href="#" class="flex items-center hover:text-white hover:bg-cyan-500 p-2">
+                <svg fill="currentColor" class="w-6 h-6 m-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
+                Youtube
+            </a>
+            <a href="#" class="flex items-center hover:text-white hover:bg-cyan-500 p-2">
+                <svg fill="currentColor" class="w-6 h-6 m-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                <path d="M12,0C5.373,0,0,5.373,0,12c0,6.016,4.432,10.984,10.206,11.852V15.18H7.237v-3.154h2.969V9.927c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L16.73,15.18h-3.106v8.697 C19.481,23.083,24,18.075,24,12C24,5.373,18.627,0,12,0z"/>
+                </svg>
+                Facebook
+            </a>
+            </div>
+        </div>
+        </div>
+    
+        <!-- Contact Me -->
+        <form action="#" class="w-full md:w-1/2 border border-cyan-500 p-6 bg-gray-900">
+        <h2 class="text-2xl pb-3 font-semibold">
+            Send Message
+        </h2>
+        <div>
+            <div class="flex flex-col mb-3">
+            <label for="name">Name</label>
+            <input 
+                type="text" id="name" 
+                class="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-cyan-500 focus:outline-none focus:bg-gray-800 focus:text-cyan-500"
+                autocomplete="off"
+            >
+            </div>
+            <div class="flex flex-col mb-3">
+            <label for="email">Email</label>
+            <input 
+                type="text" id="email" 
+                class="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-cyan-500 focus:outline-none focus:bg-gray-800 focus:text-cyan-500"
+                autocomplete="off"
+            >
+            </div>
+            <div class="flex flex-col mb-3">
+            <label for="message">Message</label>
+            <textarea 
+                rows="4" id="message" 
+                class="px-3 py-2 bg-gray-800 border border-gray-900 focus:border-cyan-500 focus:outline-none focus:bg-gray-800 focus:text-cyan-500"
+            ></textarea>
+            </div>
+        </div>
+        <div class="w-full pt-3">
+            <button type="submit" class="w-full bg-gray-900 border border-cyan-500 px-4 py-2 transition duration-50 focus:outline-none font-semibold hover:bg-cyan-500 hover:text-white text-xl cursor-pointer">
+            Send
+            </button>
+        </div>
+        </form>
+    </div>
+    </section>
+</body>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+    ScrollReveal({ 
+        reset:true,
+        distance:'80px',
+        duration:2000,
+        delay:200,
+    });
+    ScrollReveal().reveal('.left',{origin:'left'});
+    ScrollReveal().reveal('.right',{origin:'right'});
+    ScrollReveal().reveal('.bottom',{origin:'bottom'});
+</script>
+</html>

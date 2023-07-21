@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Account</title>
     <link rel="stylesheet" href="/output.css">
@@ -11,7 +12,7 @@
     <div class="container mx-auto">
         <div class="flex justify-center px-6 my-12">
             <!-- Row -->
-            <div class="w-full xl:w-3/4 lg:w-11/12 flex">
+            <div class="w-full xl:w-3/4 lg:w-6/12 flex">
                 <!-- Col -->
                 <div
                     class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
@@ -31,6 +32,13 @@
                               </div>
                             <%
                            }%>
+                           <% if (messages.success) { %>
+                            <div role="alert" class="mb-4">
+                              <div class="bg-green-500 text-white font-bold rounded-t px-4 py-2">
+                                <strong><%= messages.success %></strong> 
+                              </div>
+                            </div>
+                          <% } %>
                         <div class="mb-4 md:flex md:justify-around">
                             <div class="mb-4 md:mr-2 md:mb-0">
                                 <label class="block mb-2 text-sm font-bold text-gray-700" for="firstName">

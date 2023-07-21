@@ -15,6 +15,9 @@ const flash = require("express-flash");
 const session = require("express-session");
 const { isDate } = require("util/types");
 debugger;
+
+var HomeController = require('./controllers/Home');
+
 initializePassport(
   passport,
   async email => await User.findOne({ email }),
@@ -64,28 +67,40 @@ const EventsSchema = new mongoose.Schema({
   dateend:String
 })
 const Event = mongoose.model('Event',EventsSchema);
+
+
 // Register functionality
 app.post("/register", async (req, res) => {
   try {
-    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    const existingUser = await User.findOne({ email: req.body.email });
 
-    const newUser = new User({
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      password: hashedPassword,
-      phone: req.body.phone,
-      
-    });
+    if (existingUser) {
+      // Email already exists in the database, provide feedback as a flash message
+      req.flash("error", "Email already registered. Please use a different email or login.");
+      console.log('Email already exists:', req.body.email);
+      res.redirect("/register"); // Redirect back to the registration page to show the flash message
+    } else {
+      const hashedPassword = await bcrypt.hash(req.body.password, 10);
 
-    await newUser.save();
-    console.log('User registered successfully:', newUser);
-    res.redirect("/login");
+      const newUser = new User({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        password: hashedPassword,
+        phone: req.body.phone,
+      });
+
+      await newUser.save();
+      console.log('User registered successfully:', newUser);
+      req.flash("success", "User registered successfully!"); // Flash success message
+      res.redirect("/login");
+    }
   } catch (error) {
     console.error('Error registering user:', error);
     res.redirect("/register");
   }
 });
+
 
 // Login functionality
 app.post("/login", passport.authenticate("local", {
@@ -125,7 +140,6 @@ const port = 5501; // Set the desired port number
 
 app.listen(port, '127.0.0.1', () => {
   console.log(`Application started and listening on http://127.0.0.1:${port}/`);
-  
 });
 
 app.post('/events', async(req,res)=>{
@@ -145,3 +159,5 @@ res.redirect("/events-registration")
   res.redirect("/events-registration");
 }
 })
+
+app.post('/populateEvents',HomeController.getEvents)

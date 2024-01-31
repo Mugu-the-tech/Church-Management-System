@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+        <%- include ('../partials/bootstrap') %>
+    <title>Church Management System</title>
+</head>
+
+<body>
+    <div class="dashboard-main-wrapper">
+        <%- include ('../partials/navbar') %>
+        <!-- ============================================================== -->
+            <%- include ('../partials/sidebar') %>
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Church Management System Dashboard </h2>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Home</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+
+                    <div class="row">
+                        <!-- ============================================================== -->
+                            <!-- Totals members -->
+                        <!-- ============================================================== -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="card border-3 border-left border-primary">
+                                <div class="card-body">
+                                    <h5 class="text-muted">Members</h5>
+                                    <div class="metric-value d-inline-block">
+                                        <h1 class="mb-1"><%= count[0].total%></h1>
+                                    </div>
+                                    <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                        <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-users"></i></span><span class="ml-1">Members</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end total members  -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- total staff  -->
+                        <!-- ============================================================== -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="card border-3 border-top border-left-primary">
+                                <div class="card-body">
+                                    <h5 class="text-muted">Sermons</h5>
+                                    <div class="metric-value d-inline-block">
+                                        <h1 class="mb-1"><%=sermonsCount%></h1>
+                                    </div>
+                                    <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                        <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-book"></i></span><span class="ml-1">Sermons</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end total staff  -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Total Events  -->
+                        <!-- ============================================================== -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="card border-3 border-top border-left-primary">
+                                <div class="card-body">
+                                    <h5 class="text-muted">Events</h5>
+                                    <div class="metric-value d-inline-block">
+                                        <h1 class="mb-1"><%=eventCount[0].total%></h1>
+                                    </div>
+                                    <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                        <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-calendar"></i></span><span class="ml-1">Events</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <!-- end Events  -->
+                        <!-- total Total Prayer requests  -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            <div class="card border-3 border-top border-left-primary">
+                                <div class="card-body">
+                                    <h5 class="text-muted">Prayer Requests</h5>
+                                    <div class="metric-value d-inline-block">
+                                        <h1 class="mb-1">1340</h1>
+                                    </div>
+                                    <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                        <span class="icon-circle-small icon-box-xs text-success bg-success-light bg-success-light "><i class="fa fa-shopping-basket"></i></span><span class="ml-1">Request(s)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end total prayer requests  -->
+                        <!-- ============================================================== -->
+                    </div>
+                 
+                        <div class="row">
+                        <!-- recent members  -->
+                            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">New Members</h5>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        
+                                                        <th class="border-0">Display Picture</th>
+                                                        <th class="border-0">Name</th>
+                                                        <th class="border-0">Gender</th>
+                                                        <th class="border-0">Occupation</th>
+                                                        <th class="border-0">Phone</th>
+                                                        <th class="border-0">E-mail</th>
+                                                        <th class="border-0">Date of Birth</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <% for (member of members) { %>
+                                                    <tr>
+                                                        
+                                                        <td>
+                                                            <div class="m-r-10"><img src="<%=member.pics%>" alt="user" class="rounded-circle" height="45" width="45"></div>
+                                                        </td>
+                                                        <td><%=member.last_name%></td>
+                                                        <td><%=member.gender%> </td>
+                                                        <td><%=member.occupation%></td>
+                                                        <td><%=member.phone%></td>
+                                                        <td><%=member.email%></td>
+                                                        <td><%=member.dob%></td>
+                                                       
+                                                    </tr>
+                                                    <%}%>
+                                                    <tr>
+                                                        <td colspan="9"><a href="/admin/members/index" class="btn btn-outline-light float-right">All Members</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end recent members  -->
+                           
+                        </div>
+                        <div class="row">
+                         
+                            
+                                   <!-- Recent Events  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0"><i class="fas fa-calendar"></i>&emsp; Recent Events</h5>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">Name</th>
+                                                        <th class="border-0">Venue</th>
+                                                        <th class="border-0">Description</th>
+                                                       
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <% for (event of events) { %>
+                                                    <tr>
+                                                        <td><%=event.name%></td>
+                                                        <td><%=event.venue%> </td>
+                                                        <td><%-event.description.substr(0,50)+'...'%></td>
+                                                        <!-- EDIT, VIEW AND DELETE -->                                                       
+                                                    </tr>
+                                                    <%}%>
+                                                    <tr>
+                                                        <td colspan="9"><a href="/admin/events/index" class="btn btn-outline-light float-right">All Events</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end recent events -->
+                            <!-- ============================================================== -->
+
+
+                            <!-- Recent sermons -->
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0"> <i class="fas fa-microphone"></i> &emsp; Recent Sermons</h5>
+                                    </div>
+                                    <div class="card-body p-0">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead class="bg-light">
+                                                        <tr class="border-0">
+                                                            <th class="border-0">Title</th>
+                                                            <th class="border-0">Content</th>
+                                                            <th class="border-0">Category</th>
+                                                           
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <% for (sermon of sermons) { %>
+                                                        <tr>
+                                                            <td><%=sermon.title%></td>
+                                                            <td><%-sermon.contents.substr(0,50)+'...'%> </td>
+                                                            <td><%=sermon.category%></td>
+                                                            <!-- EDIT, VIEW AND DELETE -->                                                       
+                                                        </tr>
+                                                        <%}%>
+                                                        <tr>
+                                                            <td colspan="9"><a href="/admin/sermons/index" class="btn btn-outline-light float-right">All Sermons</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <!-- end requests -->
+                        
+                        </div>
+
+                        
+                        <div class="row">                                      
+            
+        </div>
+    </div>
+    </div>  
+        <%- include ('../partials/footer')%>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery.calendar-widget.js"></script>
+    <script>
+    $(".calendar").calendarWidget({
+	    month: new Date().getMonth(),
+        year: new Date().getFullYear()					  
+    });
+    </script>
+    <%- include ('../partials/javascript')%>
+</body>
+ 
+</html>

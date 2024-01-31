@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/style.css">
+    <title>Sermons | PCEA Kamangu Town Church</title>
+</head>
+<body class="homejumbbg">
+    <section class="container">
+        <p class="display-4 text-center mt-3 text-light">SERMONS PAGE</p><hr>
+        <div class="row mt-4">
+            <% for (sermon of sermons) {  %>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header"><p class="lead text-left"><strong><%=sermon.title%></strong><br><%=sermon.catname%> <br> <%=sermon.datey.toLocaleString()%>  </p></div>
+                    <div class="card-body">
+                        <p class="text-justify lead"><%=sermon.contents.substr(0,100)%>...</p>
+                        <div>
+                            <a href="/sermons/show/<%=sermon.id%>" class="btn btn-danger"> Read more </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </section>
+    <script>
+        
+    </script>
+</body>
+</html>

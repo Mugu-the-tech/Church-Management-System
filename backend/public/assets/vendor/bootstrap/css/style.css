@@ -1,0 +1,39 @@
+.homejumbbg{
+    background: #F5F5F5;  /* fallback for old browsers */
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%); 
+
+}
+.jumb{
+    height: 20em;
+}
+.h1big{
+    font-size: 4em;
+}
+.yellow{
+    background-color: #F2C335;
+}
+.text-yellow{
+    color: #F2C335;
+}
+
+#link{
+    color: honeydew !important;
+}
+.green{
+    background-color: #3E5902;
+}
+.pink{
+    background-color: #7D4EBF;
+}
+.orange{
+    background-color: #F29A2E;
+}
+.fade-red{
+    background-color: #F28D77;
+}
+.text-fade-red{
+    color: #F28D77;
+}
+#section1{
+    margin-top: 0.5em !important;
+}   

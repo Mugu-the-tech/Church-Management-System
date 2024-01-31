@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <%- include ('../partials/bootstrap') %>
+        <link rel="stylesheet" href="/css/toastr.min.css">
+    <title>All Events</title>
+</head>
+
+<body>
+    
+    <div class="dashboard-main-wrapper">
+        <%- include ('../partials/navbar') %>
+        <!-- ============================================================== -->
+            <%- include ('../partials/sidebar') %>
+        <!-- ============================================================== -->
+       
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                <!-- pageheader  -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Church Management System Dashboard </h2>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item">Events</li>
+                                            <li class="breadcrumb-item active" aria-current="page">All Events</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end pageheader  -->
+                    <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header"><i class="fas fa-calendar"></i>&emsp;All Events<a href="/admin/events/create" class="btn btn-outline-primary btn-rounded btn-sm float-right">&plus; Add new</a></h5>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="bg-light">
+                                            <tr class="border-0">
+                                                <th class="border-0">Name</th>
+                                                <th class="border-0">Venue</th>
+                                                <th class="border-0">Description</th>
+                                                <th class="border-0">View</th>
+                                                <th class="border-0">Edit</th>
+                                                <th class="border-0">Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <% for (event of events) { %>
+                                            <tr>
+                                                <td><%=event.name%></td>
+                                                <td><%=event.venue%> </td>
+                                                <td><%-event.description.substr(0,50)+'...'%></td>
+                                                <!-- EDIT, VIEW AND DELETE -->
+                                                <td><a class='btn-sm btn-info' href="/admin/events/view/<%=event.id%>"><i class="fas fa-eye"></i></a></td>
+                                                <td><a class='btn-sm btn-primary' href="/admin/events/edit/<%=event.id%>"><i class="fas fa-edit"></i></a></td>
+                                                <td><a class='btn-sm btn-danger' href="/admin/events/delete/<%=event.id%>"><i class="fas fa-trash"></i></a></td>
+                                               
+                                            </tr>
+                                            <%}%>
+                                            <tr>
+                                                <td colspan="9"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="row justify-content-center">
+                        <nav aria-label="Page lx-auto navigation example">
+                            <ul class="pagination">
+                                <% if (pageno<=1) {%>
+                                    <li class="page-item <%= 'disabled' %>"><a class="page-link" href="#">Previous</a></li>
+                                <%} else{%>
+                                    <li class="page-item"><a class="page-link" href="?page=<%= pageno-1 %>">Previous</a></li>
+                                <%}%>
+                                    <li class="page-item"> Showing <%=pageno%> /  <%=totalpages%> Pages </li>
+                                <!-- Next -->
+                                <% if (pageno>=totalpages) {%>
+                                    <li class="page-item <%= 'disabled' %>"><a class="page-link" href="#">Next</a></li>
+                                <%} else{%>
+                                    <li class="page-item"><a class="page-link" href="?page=<%= (pageno+1) %>">Next</a></li>
+                                <%}%>
+                            </ul>
+                        </nav>
+
+                    </section>
+                </div>
+            </div>    
+        </div>
+        <%- include ('../partials/footer')%>
+    </div>
+    <!-- Optional JavaScript -->
+    <%- include ('../partials/javascript')%>
+    <script src="/js/toastr.min.js"></script>
+    <script>
+        <% if (success.length>0) { %>
+            toastr.success('<%=success%>')
+        <% } %>
+    </script>
+</body>
+ 
+</html>

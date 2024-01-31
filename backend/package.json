@@ -1,0 +1,31 @@
+{
+  "name": "pcea",
+  "version": "1.1.1",
+  "description": "Church Management System",
+  "engines": {
+    "node": "8.16.1"
+  },
+  "main": "server.js",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Eliud",
+  "license": "MIT",
+  "dependencies": {
+    "apache-crypt": "^1.2.1",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.9",
+    "express-mysql-session": "^2.1.0",
+    "express-session": "^1.15.6",
+    "knex": "^2.5.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "slugify": "^1.3.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

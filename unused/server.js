@@ -90,6 +90,7 @@ app.post("/register", async (req, res) => {
         phone: req.body.phone,
       });
 
+    
       await newUser.save();
       console.log('User registered successfully:', newUser);
       req.flash("success", "User registered successfully!"); // Flash success message
@@ -131,6 +132,10 @@ app.get('/register', (request, response, next) => {
 
 app.get('/events-registration',(req,res,next)=> {
   res.render("events-registration.ejs");
+})
+
+app.get('/events',(request,response,next)=>{
+  response.render("events.ejs");
 })
 // End of routes
 

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <%- include ('../partials/bootstrap') %>
+        <link rel="stylesheet" href="/css/toastr.min.css">
+    <title>All Member</title>
+</head>
+
+<body>
+    
+    <div class="dashboard-main-wrapper">
+        <%- include ('../partials/navbar') %>
+        <!-- ============================================================== -->
+            <%- include ('../partials/sidebar') %>
+        <!-- ============================================================== -->
+       
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Church Management System Dashboard </h2>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item">Requests</li>
+                                            <li class="breadcrumb-item active" aria-current="page">All Requests</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+                 
+                        <div class="row">
+                            <!-- ============================================================== -->
+                      
+                            <!-- ============================================================== -->
+
+                                          <!-- recent members  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header"><i class="fas fa-user"></i>&emsp;All Requests</h5>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        
+                                                        <th class="border-0">Name</th>
+                                                        <th class="border-0">Request</th>
+                                                        <th class="border-0">View</th>
+                                                       
+                                                        <th class="border-0">Delete</th>
+                                                        
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody class='mb-4'>
+                                                        <% for (prayer of prayers) { %>
+                                                    <tr>
+                                                        <td><%=prayer.name%></td>
+                                                        <td><%=prayer.request%> </td>
+                                                        
+                                                        <!-- EDIT, VIEW AND DELETE -->
+                                                        <td><a class='btn-sm btn-info' href="/admin/prayer/view/<%=prayer.id%>"><i class="fas fa-eye"></i></a></td>
+                                                        <td><a  class='btn-sm btn-danger' href="/admin/prayer/delete/<%=prayer.id%>"><i class="fas fa-trash"></i></a></td>
+                                                       
+                                                    </tr>
+                                                    <%}%>
+                                                    <tr>
+                                                        <td colspan="9"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                 
+                    </div>
+                </div>
+            </div>
+            <%- include ('../partials/footer')%>
+    </div>
+    <!-- Optional JavaScript -->
+    <%- include ('../partials/javascript')%>
+    
+</body>
+ 
+</html>

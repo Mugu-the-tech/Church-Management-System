@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/style.css">
+    <link rel="stylesheet" href="/output.css">
+    <title>Events | PCEA Kamangu Town Church</title>
+</head>
+<body class="homejumbbg">
+ 
+    <section class="container">
+        <p class=" text-center mt-3 text-light">CHURCH PAST & CURRENT EVENTS</p><hr>
+        <div class="row mt-4">
+            <% for (event of events) {  %>
+            <div class="col-lg-4 mb-3">
+                <div class="card">
+                    <div class="card-header"><p class="lead text-left"><strong><%=event.name%></strong><br><%=event.venue%> <br> <%=event.created_at.toLocaleString()%>  </p></div>
+                    <div class="card-body">
+                        <p class="text-justify lead"><%=event.description%></p>
+                        
+                    </div>
+                    <div class="card-footer"><p class="lead text-center text-danger"> Come and be Blessed !!! </p></div>
+                </div>
+            </div><p></p>
+            <% } %>
+        </div>
+    </section>
+    <script>
+        
+    </script>
+</body>
+</html>

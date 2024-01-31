@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+        <%- include ('../partials/bootstrap')%>
+        <link rel="stylesheet" href="/css/toastr.min.css">
+    <title>New Member</title>
+</head>
+
+<body>
+    
+    <div class="dashboard-main-wrapper">
+        <%- include ('../partials/navbar')%>
+        <%- include ('../partials/sidebar')%>
+       
+            
+                <div class="container  dashboard-content ">                    
+                        <div class="row justify-content-center">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4 mt-2">
+                                        <div style="margin-left:12em !important;">
+                                            <h2 class="pageheader-title">Church Management System Dashboard </h2>
+                                            <div class="page-breadcrumb">
+                                                <nav aria-label="breadcrumb">
+                                                    <ol class="breadcrumb">
+                                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                                        <li class="breadcrumb-item" aria-current="page">Members</li>
+                                                        <li class="breadcrumb-item active" aria-current="page">Add Member</li>
+                                                    </ol>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-12 col-sm-12 col-12  ">
+                                        <div class="card">
+                                                <h5 class="card-header"><i class="fas fa-user-plus">&emsp;</i>Add New Member </h5>
+                                                <div class="card-body">
+                                                        <form method="POST"  action="/admin/members/create" enctype="multipart/form-data">
+                                                            <div class="form-group">
+                                                                <input class="form-control form-control-lg" required=true name="first" type="text" placeholder="First Name" required value="">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                    <input class="form-control form-control-lg" required=true name="last" type="text" required placeholder="Last Name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label>Date of Birth <small class="text-muted">dd/mm/yyyy</small></label>
+                                                                        <input type="date" class="form-control date-inputmask" id="date-mask" name="dob" required placeholder="">
+                                                                </div>
+                                                                
+                                                                <div class="form-group">
+                                                                        <label for="input-select">Gender</label>
+                                                                        <select class="form-control" id="input-select" name="gender" required>
+                                                                            <option value="Male">Male</option>
+                                                                            <option value="Female">Female</option>
+                                                                        </select>
+                                                                </div>
+
+                                                            <div class="form-group">
+                                                                <input class="form-control form-control-lg" required=true name="occupation" type="text" placeholder="Occupation" >
+                                                            </div>
+                                                            <div class="form-group">
+                                                                    <label>Phone <small class="text-muted">08012345678</small></label>
+                                                                    <input type="tel" class="form-control phone-inputmask" name="phone" maxlength="14" required >
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label>Email <small class="text-muted">xxx@xxx.xxx</small>
+                                                                        </label>
+                                                                        <input type="text" class="form-control email-inputmask" name='email' id="email-mask" placeholder="Email" value="xxxx@xxx.xxx">
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                        <label>Address <small class="text-muted">Residential Address</small>
+                                                                        </label>
+                                                                        <textarea name="address" id="" cols="30" rows="5" class="form-control" required></textarea>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="input-select">Marital Status</label>
+                                                                        <select class="form-control" id="input-select" name="maritalstatus" required>
+                                                                            <option value="Married">Married</option>
+                                                                            <option value="Single">Single</option>
+                                                                        </select>
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                        <label for="input-select">Units</label>
+                                                                        <select class="form-control" id="input-select" name="unit">
+                                                                            <% for (unit of units) {%>
+                                                                            <option value="<%=unit.id%>"><%=unit.name%></option>
+                                                                            <%}%>
+                                                                        </select>
+                                                                    </div>
+                                                            
+                                                            
+                                                            <div class="form-group">
+                                                                    <input class="form-control form-control-lg" name="image" type="file" accept="image/png, image/jpeg, image/jpg" required>
+                                                            </div>
+                                                            <button type="submit" class="btn btn-primary btn-lg btn-block">Add Member</button>
+                                                        </form>
+                                                </div>
+                                          </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include ('../partials/footer')%>
+                    </div>      
+       
+    <!-- Optional JavaScript -->
+    <%- include ('../partials/javascript')%>
+    <script src="/js/toastr.min.js"></script>
+    <script>
+        <% if (success.length>0) { %>
+            toastr.success('<%= success%>')
+        <% } else if(error.length>0) { %>
+            toastr.error('<%=error%>')
+        <%} %>
+    </script>
+</body>
+ 
+</html>

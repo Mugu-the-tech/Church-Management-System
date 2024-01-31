@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/style.css">
+    <title>Prayer Request | PCEA Kamangu Town </title>
+</head>
+<body class="homejumbbg">
+    <section class="container">
+        <div class="row mt-4">
+            <div class="col-lg-4 offset-lg-4 mb-3">
+                <div class="card">
+                    <div class="card-text"><p class="lead text-center">Submit a Request</p></div><hr>
+                    <div class="card-body">
+                        <form method="POST" action="/prayer" class="form-group">
+                            <input type="text" placeholder="Name" name="name" class="form-control mb-3">
+                            <textarea name="" id="" cols="30" name='request' rows="10" placeholder="Your request Here" class="form-control mb-3"></textarea>
+                            <div class="text-center">
+                                <button class="btn btn-block btn-success mb-3">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <%- include ('../partials/bootstrap') %>
+        <link rel="stylesheet" href="/css/toastr.min.css">
+    <title>All Member</title>
+</head>
+
+<body>
+    
+    <div class="dashboard-main-wrapper">
+        <%- include ('../partials/navbar') %>
+        <!-- ============================================================== -->
+            <%- include ('../partials/sidebar') %>
+       
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Church Management System Dashboard </h2>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item">Members</li>
+                                            <li class="breadcrumb-item active" aria-current="page">All Members</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+                 
+                        <div class="row">
+                            <!-- ============================================================== -->
+                      
+                            <!-- ============================================================== -->
+
+                                          <!-- recent members  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header"><i class="fas fa-user"></i>&emsp;All Members<a href="/admin/members/create" class="btn btn-outline-primary btn-rounded btn-sm float-right">&plus; Add new</a></h5>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        
+                                                        <th class="border-0">Display Picture</th>
+                                                        <th class="border-0">Name</th>
+                                                        <th class="border-0">Gender</th>
+                                                        <th class="border-0">Occupation</th>
+                                                        <th class="border-0">Phone</th>
+                                                        <th class="border-0">E-mail</th>
+                                                        <th class="border-0">View</th>
+                                                        <th class="border-0">Edit</th>
+                                                        <th class="border-0">Delete</th>
+                                                        
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody class='mb-4'>
+                                                        <% for (member of members) { %>
+                                                    <tr>
+                                                        
+                                                        <td>
+                                                            <div class="m-r-10"><img src="<%=member.pics%>" alt="user" class="rounded-circle" height="45" width="45"></div>
+                                                        </td>
+                                                        <td><%=member.last_name%></td>
+                                                        <td><%=member.gender%> </td>
+                                                        <td><%=member.occupation%></td>
+                                                        <td><%=member.phone%></td>
+                                                        <td><%=member.email%></td>
+                                                        <!-- EDIT, VIEW AND DELETE -->
+                                                        <td><a class='btn-sm btn-info' href="/admin/members/view/<%=member.id%>"><i class="fas fa-eye"></i></a></td>
+                                                        <td><a class='btn-sm btn-primary' href="/admin/members/edit/<%=member.id%>"><i class="fas fa-edit"></i></a></td>
+                                                        <td><a  class='btn-sm btn-danger' href="/admin/members/delete/<%=member.id%>"><i class="fas fa-trash"></i></a></td>
+                                                       
+                                                    </tr>
+                                                    <%}%>
+                                                    <tr>
+                                                        <td colspan="9"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <!-- Pagination -->
+                        <section class="row justify-content-center">
+                            <nav aria-label="Page lx-auto navigation example">
+                                <ul class="pagination">
+                                    <% if (pageno<=1) {%>
+                                        <li class="page-item <%= 'disabled' %>"><a class="page-link" href="#">Previous</a></li>
+                                    <%} else{%>
+                                        <li class="page-item"><a class="page-link" href="?page=<%= pageno-1 %>">Previous</a></li>
+                                    <%}%>
+                                        <li class="page-item"> Showing <%=pageno%> /  <%=totalpages%> Pages </li>
+                                    <!-- Next -->
+                                    <% if (pageno>=totalpages) {%>
+                                        <li class="page-item <%= 'disabled' %>"><a class="page-link" href="#">Next</a></li>
+                                    <%} else{%>
+                                        <li class="page-item"><a class="page-link" href="?page=<%= (pageno+1) %>">Next</a></li>
+                                    <%}%>
+                                </ul>
+                            </nav>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <%- include ('../partials/footer')%>
+    </div>
+    <!-- Optional JavaScript -->
+    <%- include ('../partials/javascript')%>
+    <script src="/js/toastr.min.js"></script>
+    <script>
+         <% if (success.length>0) { %>
+            toastr.success('<%= success%>');
+        <%}%>
+    </script>
+</body>
+ 
+</html>

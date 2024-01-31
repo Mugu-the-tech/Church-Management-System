@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <%- include ('../partials/bootstrap')%>
+        <link rel="stylesheet" href="/css/toastr.min.css">
+    <title>Member's Profile</title>
+</head>
+
+<body>
+    
+    <div class="dashboard-main-wrapper">
+        <%- include ('../partials/navbar') %>
+        <!-- ============================================================== -->
+            <%- include ('../partials/sidebar') %>
+       
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Church Management System Dashboard </h2>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item">Members</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Member's Profile</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+
+                    <div class="row">
+                            <div class="col-xl-8 offset-xl-2 col-lg-8 cc col-md-6 col-sm-12 col-12">
+                                    <div class="card">
+                                        <img class="img-fluid mx-auto mt-3 rounded-circle" height='80'  width='80' src="<%=member.pics%>" alt="Card image cap">
+                                        <p class="text-center mt-3">Joined: <%= member.created_at%></p>
+                                        <hr>
+                                        <div class="card-body">
+                                            <h3 class="card-title">Name</h3>
+                                            <p class="card-text"><%=member.first_name%>&emsp;--&emsp; <%=member.last_name%></p>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                                
+                                            <li class="list-group-item"> <h3 class="">Occupation</h3><%=member.occupation%></li>
+                                            <li class="list-group-item"><h3 class="">Date of Birth</h3><%=member.dob%></li>
+                                            <li class="list-group-item"><h3 class="">Phone Number</h3><%=member.phone%></li>
+                                            <li class="list-group-item"><h3 class="">E-mail Address</h3><%=member.email%></li>
+                                            <li class="list-group-item"><h3 class="">Gender</h3><%=member.gender%></li>
+                                            <li class="list-group-item"><h3 class="">Marital Status</h3><%=member.marital_status%></li>
+                                            <li class="list-group-item"><h3 class="">Residential Address</h3><%=member.address%></li>
+                                        </ul>
+                                        <div class="card-footer">
+                                            <button class="btn btn-primary" onclick="window.history.back()"> <i class=" fas fa-arrow-alt-circle-left">&nbsp;</i> Back</button>
+                                            <button class="btn btn-info float-right" onclick="window.print()"> <i class=" fas fa-print">&nbsp;</i> Print</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                 
+                        </div>
+                    </div>
+                </div>
+                <%- include ('../partials/footer')%>
+            </div>    
+    <!-- Optional JavaScript -->
+    <%- include ('../partials/javascript')%>
+    <script src="/js/toastr.min.js"></script>
+    <script>
+    
+    </script>
+</body>
+ 
+</html>

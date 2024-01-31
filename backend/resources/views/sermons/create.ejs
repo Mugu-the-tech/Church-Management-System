@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <%- include ('../partials/bootstrap')%>
+        <link rel="stylesheet" href="/css/toastr.min.css">
+        <link rel="stylesheet" href="/editor/summernote.css">
+    <title>Create Sermon</title>
+</head>
+
+<body>
+    
+    <div class="dashboard-main-wrapper">
+        <%- include ('../partials/navbar')%>
+        <%- include ('../partials/sidebar')%>
+       
+            
+                <div class="container  dashboard-content ">                    
+                        <div class="row justify-content-center">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4 mt-2">
+                                        <div style="padding-left:12em">
+                                            <h2 class="pageheader-title">Church Management System Dashboard </h2>
+                                            <div class="page-breadcrumb">
+                                                <nav aria-label="breadcrumb">
+                                                    <ol class="breadcrumb">
+                                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                                        <li class="breadcrumb-item" aria-current="page">Sermons</li>
+                                                        <li class="breadcrumb-item active" aria-current="page">Add Sermon</li>
+                                                    </ol>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-12 col-sm-12 col-12  ">
+                                        <div class="card">
+                                                <h5 class="card-header"><i class="fas fa-microphone">&emsp;</i>Add New Sermon </h5>
+                                                <div class="card-body">
+                                                        <form method="POST"  action="/admin/Sermons/create">
+                                                            <div class="form-group">
+                                                                    <label>Title <small class="text-muted"> &nbsp; Title</small></label>
+                                                                    
+                                                                <input class="form-control form-control-lg" required=true name="title" type="text" placeholder="Sermon's Title" required value="">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                    <label>Category <small class="text-muted"> &nbsp; Choose a category</small></label>
+                                                                    <select name="category" class="form-control">
+                                                                        <option value="0">Choose a Category</option>
+                                                                        <% for (category of categories) { %>
+                                                                            <option value="<%= category.id%>"><%= category.name %></option>
+                                                                        <% } %>
+                                                                    </select>
+                                                            </div>
+                                                            
+                                                            <div class="form-group">
+                                                                    <label>Content <small class="text-muted"> &nbsp; Messages</small></label>
+                                                                        <textarea name="contents" id="textEdit" placeholder="Event's Descriptions Goes Here" cols="30" rows="5" class="form-control" required></textarea>
+                                                            </div>
+                                                            <button type="submit" class="btn btn-primary btn-lg btn-block">Add Sermon</button>
+                                                        </form>
+                                                </div>
+                                          </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include ('../partials/footer')%>
+                    </div>
+        
+       
+    <!-- Optional JavaScript -->
+    <%- include ('../partials/javascript')%>
+    <script src="/js/toastr.min.js"></script>
+    <script src="/editor/summernote.js"></script>
+    <script>
+        $(()=>{
+            $('#textEdit').summernote();
+        })
+    </script>
+    
+</body>
+ 
+</html>

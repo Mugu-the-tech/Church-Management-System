@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/style.css">
+    <title>Sermons | Kamangu Town Church</title>
+</head>
+<body class="homejumbbg">
+    <section class="container">
+        <p class="display-4 text-center mt-3 text-light"><%=sermon.title%> <br><%=sermon.datey.toLocaleString()%></p><hr>
+        <div class="row mt-4">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="card">
+                    <div class="card-header"><p class="lead text-left"><strong><%=sermon.title%></strong><br><%=sermon.catname%></p></div>
+                    <div class="card-body">
+                        <p class="text-justify lead"><%=sermon.contents%></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
